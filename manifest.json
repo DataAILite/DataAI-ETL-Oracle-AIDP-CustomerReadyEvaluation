@@ -1,0 +1,19 @@
+{
+    "provider":  "Yanbor LLC",
+    "product":  "Oracle AIDP Spark",
+    "repository":  "DataAILite/DataAI-ETL-Oracle-AIDP-CustomerReadyEvaluation",
+    "visibility":  "public",
+    "status":  "customer-ready-evaluation",
+    "evaluationLimit":  "less than 32 consecutive calendar days",
+    "productionAuthorized":  false,
+    "package":  "DataAI_ETL_Oracle_AIDP_Evaluation.zip",
+    "size":  2243491,
+    "sha256":  "1eeba40f96e2a3fb67057480715d8978915c7a698eb3a343b91d9b55e4126dab",
+    "entries":  21,
+    "runtimeBaseline":  {
+                            "java":  "17",
+                            "spark":  "3.5.0",
+                            "scalaBinary":  "2.12"
+                        },
+    "sourceCatalog":  "https://oureports.net/OUReports/DataAIETLmarkets.html"
+}

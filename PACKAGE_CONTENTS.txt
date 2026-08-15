@@ -1,0 +1,22 @@
+Archive path	Uncompressed bytes
+DataAI_ETL_Oracle_AIDP_Evaluation/COMMERCIAL_LICENSE_TEMPLATE.md	33599
+DataAI_ETL_Oracle_AIDP_Evaluation/docs/FUNCTION_CATALOG.md	13688
+DataAI_ETL_Oracle_AIDP_Evaluation/docs/INSTALLATION_AND_USAGE.md	2148
+DataAI_ETL_Oracle_AIDP_Evaluation/docs/ORIGINAL_PRODUCT_README.md	2246
+DataAI_ETL_Oracle_AIDP_Evaluation/docs/platform/RELEASE_GATES.md	784
+DataAI_ETL_Oracle_AIDP_Evaluation/docs/PRODUCT_GUIDE.md	1899
+DataAI_ETL_Oracle_AIDP_Evaluation/lib/dataai-spark-api-0.1.0-SNAPSHOT.jar	8678
+DataAI_ETL_Oracle_AIDP_Evaluation/lib/dataai-spark-cli-0.1.0-SNAPSHOT.jar	2323660
+DataAI_ETL_Oracle_AIDP_Evaluation/lib/dataai-spark-core-0.1.0-SNAPSHOT.jar	10192
+DataAI_ETL_Oracle_AIDP_Evaluation/lib/dataai-spark-functions-0.1.0-SNAPSHOT.jar	58890
+DataAI_ETL_Oracle_AIDP_Evaluation/lib/dataai-spark-quality-0.1.0-SNAPSHOT.jar	6685
+DataAI_ETL_Oracle_AIDP_Evaluation/LICENSE.md	7910
+DataAI_ETL_Oracle_AIDP_Evaluation/manifest.json	688
+DataAI_ETL_Oracle_AIDP_Evaluation/PACKAGE_CONTENTS.sha256	1954
+DataAI_ETL_Oracle_AIDP_Evaluation/platform/container/Dockerfile	526
+DataAI_ETL_Oracle_AIDP_Evaluation/platform/container/README.md	267
+DataAI_ETL_Oracle_AIDP_Evaluation/README.md	847
+DataAI_ETL_Oracle_AIDP_Evaluation/smoke-test/dataai-customer-ready-smoke-test-0.1.0-SNAPSHOT.jar	9282
+DataAI_ETL_Oracle_AIDP_Evaluation/smoke-test/README.md	1518
+DataAI_ETL_Oracle_AIDP_Evaluation/smoke-test/run-smoke-test.ps1	2013
+DataAI_ETL_Oracle_AIDP_Evaluation/THIRD_PARTY_NOTICES.md	634
