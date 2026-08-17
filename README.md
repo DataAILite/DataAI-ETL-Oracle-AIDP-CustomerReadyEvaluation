@@ -36,8 +36,6 @@ Use only fictional or customer-approved non-production data. A successful smoke 
 4. [Review the product evaluation-license page](docs/EVALUATION_LICENSE.html).
 5. [Review the complete DataAI ETL function catalog](docs/FUNCTION_CATALOG.html), including matrix balancing.
 
-Additional adapter documentation is included in `docs/` for IRIS and Tableau function outputs and schemas.
-
 ## Repository contents
 
 ```text
@@ -56,7 +54,6 @@ docs/
   USAGE_GUIDE.html
   EVALUATION_LICENSE.html
   FUNCTION_CATALOG.html
-  adapter output documentation
   usage.css
 ```
 
