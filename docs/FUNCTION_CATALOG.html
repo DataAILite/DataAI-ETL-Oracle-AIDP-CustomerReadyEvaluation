@@ -67,7 +67,6 @@
                 <li><a href="#geo">Geographic analysis</a></li>
                 <li><a href="#matrix">Matrix analysis and balancing</a></li>
                 <li><a href="#insights">Data dictionary, recommendations, alerts, and narratives</a></li>
-                <li><a href="#adapters">Platform output adapters</a></li>
                 <li><a href="#execution">Execution behavior</a></li>
                 <li><a href="#delegated">Capabilities delegated to the customer's platform</a></li>
             </ul>
@@ -264,33 +263,6 @@ if (!balanced.converged()) {
             <tr><td>Rule-based alerts</td><td><code>InsightFunctions.ruleBasedAlerts(...)</code></td></tr>
         </table>
         <p>Narratives are deterministic and local. They do not send customer data to an external AI endpoint. Customers can optionally send the returned, governed summary DataFrame to their own approved AI integration.</p>
-
-        <!-- Platform output adapters -->
-        <h2 id="adapters">Platform output adapters</h2>
-
-        <h3>Tableau output adapter</h3>
-        <p>Add <code>com.dataai:dataai-spark-tableau:0.1.0-SNAPSHOT</code> when a Spark application needs standardized DataAI outputs for Tableau. <code>TableauOutputs.from(...)</code> accepts a <code>DataAiResult</code> and returns a <code>TableauOutputBundle</code> containing:</p>
-        <ul>
-            <li><code>cleanRows()</code> and <code>rejectedRows()</code>;</li>
-            <li><code>qualityFindings()</code> and <code>fieldProfiles()</code>;</li>
-            <li>a one-row <code>pipelineRuns()</code> DataFrame;</li>
-            <li>a one-row <code>dashboardMetrics()</code> DataFrame with row totals, quality score, finding counts by severity, profile count, and total null values.</li>
-        </ul>
-        <p><code>TableauOutputNames</code> provides stable default table-name constants. The adapter does not persist, cache, collect, connect to Tableau, or make network calls. The customer explicitly writes the returned DataFrames to a format/catalog visible through Tableau's native Spark SQL or Databricks connector.</p>
-        <p>Use <code>TableauFunctionOutputs.withRunMetadata(...)</code> with any function-result DataFrame to add reserved result name, run ID, completion time, and library version fields. Use <code>TableauFunctionOutputs.matrixBalance(...)</code> to convert a <code>MatrixBalanceResult</code> with iteration count, maximum error, and convergence fields.</p>
-<pre><code>TableauOutputBundle tableau = TableauOutputs.from(result);
-
-tableau.dashboardMetrics().write()
-        .format("delta")
-        .mode(SaveMode.Append)
-        .saveAsTable("analytics.dataai_dashboard_metrics");</code></pre>
-        <p>The Tableau-specific output schema and coverage documentation are distributed separately with DataAI ETL for Tableau.</p>
-
-        <h3>InterSystems IRIS adapter</h3>
-        <p>Add <code>com.dataai:dataai-spark-iris:0.1.0-SNAPSHOT</code> when DataAI must read from or write approved outputs to InterSystems IRIS. <code>IrisJdbcOptions</code> creates a safe, customer-controlled JDBC configuration; <code>IrisDataFrames</code> provides table, partitioned-table, query, and explicitly invoked writer entry points.</p>
-        <p><code>IrisPipelineOutputs.from(...)</code> converts a <code>DataAiResult</code> into clean, rejected, finding, profile, and pipeline-run DataFrames with stable IRIS output names. The adapter never chooses a target table or save mode and never invokes <code>save()</code> for the customer.</p>
-        <p>Use <code>IrisFunctionOutputs.withRunMetadata(...)</code> for any result DataFrame. Use <code>IrisFunctionOutputs.matrixBalance(...)</code> for matrix balancing with run, library, platform, convergence, iteration, and maximum-error metadata.</p>
-        <p>The IRIS-specific output and integration documentation is distributed separately with DataAI ETL for InterSystems IRIS. The adapter uses Spark's standard JDBC source and does not bundle the InterSystems driver, persist automatically, collect full data, call a DataAI service, or emit telemetry.</p>
 
         <!-- Execution behavior -->
         <h2 id="execution">Execution behavior</h2>
